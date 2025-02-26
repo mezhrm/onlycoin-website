@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyCoin - The Fun Meme Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+        }
+        header {
+            padding: 50px 20px;
+            background-color: #000000;
+        }
+        header img {
+            width: 150px;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            color: #ff6f61;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 20px auto;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+        .cta-button {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: #ffffff;
+            background-color: #ff6f61;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e65a50;
+        }
+        .token-address {
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px auto;
+            max-width: 600px;
+            font-family: monospace;
+            cursor: pointer;
+            position: relative;
+        }
+        .token-address:hover::after {
+            content: "Click to copy";
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff6f61;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ff6f61;
+            font-size: 1.2rem;
+        }
+        .social-links a:hover {
+            color: #e65a50;
+        }
+        footer {
+            padding: 20px;
+            background-color: #000000;
+            color: #888888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="onlycoin-logo.png" alt="OnlyCoin Logo">
+        <h1>OnlyCoin</h1>
+        <p>OnlyCoin is the meme coin that brings internet culture and cryptocurrency together. Join the fun and be part of the future of entertainment!</p>
+        <a href="#" class="cta-button">Download Whitepaper</a>
+    </header>
+
+    <section>
+        <h2>About OnlyCoin</h2>
+        <p>OnlyCoin is a playful parody of OnlyFans, designed to bring humor and creativity to the crypto world. It's a community-driven project that aims to make cryptocurrency fun and accessible for everyone.</p>
+    </section>
+
+    <section>
+        <h2>Token Address</h2>
+        <div class="token-address" id="tokenAddress">
+            0x1234567890abcdef1234567890abcdef12345678
+        </div>
+        <small>(Click to copy)</small>
+    </section>
+
+    <section>
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://twitter.com/onlycoin" target="_blank">Twitter</a>
+            <a href="https://t.me/onlycoin" target="_blank">Telegram</a>
+            <a href="https://discord.gg/onlycoin" target="_blank">Discord</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 OnlyCoin. All rights reserved.
+    </footer>
+
+    <script>
+        // Token address copy functionality
+        const tokenAddress = document.getElementById('tokenAddress');
+        tokenAddress.addEventListener('click', () => {
+            navigator.clipboard.writeText(tokenAddress.innerText)
+                .then(() => alert('Token address copied to clipboard!'))
+                .catch(() => alert('Failed to copy token address.'));
+        });
+    </script>
+</body>
+</html>
